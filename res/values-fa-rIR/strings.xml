@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_scenemode_entry_portrait">افراد</string>
+    <string name="reset_pro_iso_text">ISO (حساسیت حسگر به نور) مجدداً روی خودکار تنظیم شد</string>
+    <string name="reset_pro_ev_text">EV (مقدار نوردهی) مجدداً روی 0 تنظیم شد</string>
+    <string name="msg_no_camera_found">دوربینی یافت نشده است.</string>
+    <string name="msg_no_camera_found1">دوربین در حال استفاده توسط برنامه ای دیگر است. لطفاً آن برنامه را ببندید و دوباره امتحان کنید.</string>
+    <string name="msg_no_camera_found2">اجرای دوربین ناموفق بود. لطفاً دستگاه را مجدداً راه اندازی نموده و دوباره امتحان کنید.</string>
+</resources>

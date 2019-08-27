@@ -1,0 +1,12 @@
+cat
+document
+dog
+flower
+food
+greenland
+ocean
+plant
+sky
+snow
+stage
+sunset

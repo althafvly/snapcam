@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="org.codeaurora.snapcan" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.SET_ORIENTATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.asus.permission.HARDWARE_PROPERTIES"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="false"/>
+    <application android:hardwareAccelerated="true" android:icon="@ac/__launcher_icon" android:label="@string/snapcam_app_name" android:largeHeap="true" android:logo="@mipmap/ic_launcher" android:name="com.android.camera.app.CameraApp" android:resizeableActivity="false" android:restoreAnyVersion="true" android:roundIcon="@ac/__launcher_icon" android:supportsRtl="true" android:testOnly="false" android:theme="@style/Theme.Camera">
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="@string/snapcam_app_name" android:launchMode="singleTask" android:logo="@mipmap/ic_launcher_gallery" android:name="com.android.camera.CameraActivity" android:screenOrientation="portrait" android:taskAffinity="com.android.camera.CameraActivity" android:theme="@style/Theme.Camera" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/keyguard_widget"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@mipmap/ic_launcher_video_camera" android:label="@string/video_camera_label" android:launchMode="singleTop" android:name="com.android.camera.PermissionsActivity" android:parentActivityName="com.android.camera.CameraActivity" android:visibleToInstantApps="true">
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.android.camera.CameraActivity"/>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="@string/snapcam_app_name" android:launchMode="singleTop" android:name="com.android.camera.SettingsActivity" android:parentActivityName="com.android.camera.CameraActivity" android:theme="@style/Theme.Settings"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="@string/snapcam_app_name" android:launchMode="singleTop" android:name="com.android.camera.SceneModeActivity" android:theme="@android:style/Theme.Material.Light.NoActionBar.Fullscreen"/>
+        <activity-alias android:icon="@ac/__launcher_icon" android:label="@string/snapcam_app_name" android:launchMode="singleTop" android:name="com.android.camera.CameraLauncher" android:roundIcon="@ac/__launcher_icon" android:targetActivity="com.android.camera.CameraActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:icon="@mipmap/ic_launcher" android:label="@string/snapcam_app_name" android:launchMode="singleInstance" android:logo="@mipmap/ic_launcher_gallery" android:name="com.android.camera.SecureCameraActivity" android:screenOrientation="portrait" android:taskAffinity="com.android.camera.SecureCameraActivity" android:theme="@style/Theme.Camera" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/keyguard_widget"/>
+        </activity>
+        <activity-alias android:icon="@mipmap/ic_launcher" android:label="@string/camera_gesture_title" android:name="com.android.camera.CameraGestureActivity" android:targetActivity="com.android.camera.SecureCameraActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/crop_action" android:name="com.android.camera.crop.CropActivity" android:theme="@style/Theme.Crop"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.android.camera.RefocusActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.android.camera.BestpictureActivity"/>
+        <receiver android:name="com.android.camera.CameraButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.CAMERA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.android.camera.MediaSaveService"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="com.applisto.appcloner.name" android:value="Camera"/>
+        <meta-data android:name="com.applisto.appcloner.originalName" android:value="Camera"/>
+        <meta-data android:name="com.applisto.appcloner.originalPackageName" android:value="b3JnLmNvZGVhdXJvcmEuc25hcGNhbQ=="/>
+        <meta-data android:name="com.applisto.appcloner.cloneNumber" android:value="1"/>
+        <meta-data android:name="com.applisto.appcloner.cloneSource" android:value="installed_app"/>
+        <meta-data android:name="com.applisto.appcloner.cloneTimestamp" android:value="\ 1564156166908"/>
+        <meta-data android:name="com.applisto.appcloner.cloneBuildSerial" android:value="J8AAGF083835FXH"/>
+        <meta-data android:name="com.applisto.appcloner.cloneBuildManufacturer" android:value="asus"/>
+        <meta-data android:name="com.applisto.appcloner.cloneBuildModel" android:value="ASUS_X00TD"/>
+        <meta-data android:name="com.applisto.appcloner.clonePremiumVersion" android:value="true"/>
+        <meta-data android:name="com.applisto.appcloner.forceDeviceLock" android:value="false"/>
+        <meta-data android:name="com.applisto.appcloner.runtimeModdingOptions" android:value="true"/>
+        <meta-data android:name="com.applisto.appcloner.versionCode" android:value="20002100"/>
+        <meta-data android:name="com.applisto.appcloner.versionName" android:value="2.0.002 (3402-00)"/>
+        <meta-data android:name="com.applisto.appcloner.appClonerVersionCode" android:value="19051114"/>
+        <meta-data android:name="com.applisto.appcloner.appClonerVersionName" android:value="1.5.21"/>
+        <meta-data android:name="com.applisto.appcloner.appClonerClassesVersionCode" android:value="20190306"/>
+        <meta-data android:name="com.applisto.appcloner.originalSignatures" android:value="AQAAABwAAABhAG4AZAByAG8AaQBkAC4AYwBvAG4AdABlAG4AdAAuAHAAbQAuAFMAaQBnAG4AYQB0AHUAcgBlAAAAAACsBAAAMIIEqDCCA5CgAwIBAgIJAJNurL4H8gHfMA0GCSqGSIb3DQEBBQUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODAyMjkwMTMzNDZaFw0zNTA3MTcwMTMzNDZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANaTGQTexgskse3HYuDZ2CU+Ps1s6x3i/waMqOi8qM1r03hupwqnbOYOuw+ZNVn/2T53qUPn6D1LZLjk/qLT5lbx4meoG7+yMLV4wgRDvkxyGLhG9SEVhvA4oU6Jwr44f46+z4/Kw9oe4zDJ6pPQp8PcSvNQIg1QCAcy4ICXF+5qBTNZ5qaU7Cyz8oSgpGbIepTYOzEJOmc3Li9kEsBubULxWBjf/gOBzAzURNps3cO4JFgZSAGzJWQTT7/emMkod0jb9WdqVA2BVMi7yge54kdVMxHEa5r3b97szI5p58ii0I54JiCUP5lyfTwE/nKZHZnfm644oLIXf6MdW2r+6R8CAQOjgfwwgfkwHQYDVR0OBBYEFEhZAFY9JyxGrhGGBaR0GawJyowRMIHJBgNVHSMEgcEwgb6AFEhZAFY9JyxGrhGGBaR0GawJyowRoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJAJNurL4H8gHfMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAHqvlozrUMRBBVEY0NqrrwFbinZaJ6cVosK0TyIUFf/azgMJWr+kLfcHCHJsIGnlw27drgQAvilFLAhLwn62oX6snb4YLCBOsVMR9FXYJLZW2+TcIkCRLXWG/oiVHQGo/rWuWkJgU134NDEFJCJGjDbiLCpe+ZTWHdcwauTJ9pUbo8EvHRkU3cYfGmLaLfgn9gP+pWA7LFQNvXwBnDa6sppCccEX31I828XzgXpJ4O+mDL1/dBd+ek8ZPUP0IgdyZm5MTYPhvVqGCHzzTy3sIeJFymwrsBbmg2OAUNLEMO6nwmocSdN2ClirfxqCzJOLSDE4QyS9BAH6EhY6UFcOaE0="/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+        <provider android:authorities="org.codeaurora.snapcan.com.applisto.appcloner.classes.DefaultProvider" android:exported="true" android:initOrder="2147483647" android:name="com.applisto.appcloner.classes.DefaultProvider"/>
+        <service android:exported="true" android:name="com.applisto.appcloner.service.RemoteService"/>
+        <receiver android:exported="true" android:name="com.applisto.appcloner.classes.DefaultProvider$DefaultReceiver"/>
+        <activity android:exported="true" android:name="com.applisto.appcloner.classes.DefaultProvider$MyActivity"/>
+        <receiver android:name="com.applisto.appcloner.classes.DisableClipboardAccess$ClearClipboardReceiver"/>
+    </application>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+</manifest>
